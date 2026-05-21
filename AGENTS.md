@@ -189,6 +189,20 @@ If the repo already uses something different, use what is already there. Do not 
 - **Do not rewrite working code** unless broken, insecure, or asked to refactor.
 - **Do not add a LICENSE file** unless explicitly asked.
 
+## S2M Protocol
+
+If the issue title, PR title, or explicit user request includes `S2M`, treat it as **ship to market** by default.
+
+That means the assigned repo should receive the full one-iteration delivery, not a partial scaffold:
+
+- A complete market-facing website or application surface for the repo's purpose
+- Deep research captured in `GO_TO_MARKET.md`
+- Project analysis covering value, priority, and how the repo advances larger goals
+- Standard ship docs: `README.md`, `CHANGELOG.md`, `DEPLOYMENT_GUIDE.md`, `GO_TO_MARKET.md`, `BRAND_GUIDELINES.md`, `SECURITY.md`
+- Validation that the required surface is actually present before declaring completion
+
+Do not split S2M work into staged follow-ups unless the user explicitly narrows scope.
+
 ## When You Are Done
 
 Before declaring work complete:
@@ -206,36 +220,25 @@ Before declaring work complete:
 ## Project-Specific Context
 
 ### What This Project Is
-Sessiono — session musician subscription platform. Users browse, book, and pay session musicians. Musicians list their services, set rates, and manage bookings.
+
+Leaf2Tree is a ship-to-market studio site. The repo exists to demonstrate and package the Leaf2Tree S2M process: turning rough product direction into a launch-ready website, messaging system, and operating documentation.
 
 ### Architecture
-```
-app/                    # Expo Router file-based routing
-  (tabs)/               # Bottom tab navigation
-    index.tsx           # Home — browse featured musicians
-    search.tsx          # Search by instrument/genre
-    bookings.tsx        # My bookings list
-    profile.tsx         # User profile + subscription
-  auth/login.tsx        # Login/signup modal
-  musician/[id].tsx     # Musician detail + booking
-components/             # Reusable UI components
-lib/supabase.ts         # Supabase client with SecureStore
-constants/              # Theme, config
-```
+
+- `src/` — React + TypeScript single-page S2M website
+- `public/` — static assets
+- Documentation in the repo root for deployment, brand, GTM, and security
+- `validate.py` — repository completeness check for S2M deliverables
 
 ### Key Commands
 ```bash
-npx expo start          # Dev server (scan QR with Expo Go)
-npx expo start --web    # Web dev server
-eas build --platform all  # Build for iOS + Android
-eas submit --platform ios  # Submit to App Store
+npm install
+npm run lint
+npm run build
+python3 validate.py
 ```
 
 ### Current State
-- UI scaffolding complete with dark cinematic theme
-- Demo data in place — needs Supabase integration
-- Auth screen built — needs Supabase auth wiring
-- Stripe subscription integration not started
-- Musician profile photos not implemented (use expo-image)
-- Push notifications not implemented
-- Search is static — needs Supabase full-text search
+- Marketing site implemented with Leaf2Tree S2M positioning
+- Core ship-to-market documentation included
+- Validation script should be kept current with any future S2M standard additions
