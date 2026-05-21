@@ -100,7 +100,7 @@ const protocolRules: ProtocolRule[] = [
   {
     title: 'Title-led trigger',
     description:
-      'If the title says S2M, Leaf2Tree treats that as enough signal to run the full ship-to-market motion for the target repository.',
+      'If the issue or PR title says S2M, Leaf2Tree treats that as enough signal to run the full ship-to-market motion for the target repository.',
   },
   {
     title: 'Deep research included',
@@ -219,7 +219,7 @@ function App() {
 
         <section className="section" id="offers">
           <div className="section-heading">
-            <p className="eyebrow">Offers</p>
+            <p className="eyebrow">Leaf2Tree offers</p>
             <h2>Choose the level of support that gets you unstuck fastest.</h2>
           </div>
           <div className="offer-grid">

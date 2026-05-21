@@ -44,7 +44,7 @@ REQUIRED_APP_PHRASES = [
     "S2M = ship to market",
     "Putting S2M in the title should already imply the whole shebang.",
     "The four Leaf2Tree stages",
-    "Offers",
+    "Leaf2Tree offers",
 ]
 
 
