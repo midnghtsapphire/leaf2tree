@@ -31,6 +31,7 @@ const stats: Stat[] = [
   { value: '72h', label: 'to turn scattered inputs into a launch brief' },
   { value: '1', label: 'focused message system across site, pitch, and CTA' },
   { value: '4', label: 'S2M stages from idea intake to release readiness' },
+  { value: '$10M', label: 'three-year goal for the Leaf2Tree S2M system' },
 ]
 
 const pillars: Pillar[] = [

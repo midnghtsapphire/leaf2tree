@@ -29,6 +29,8 @@ REQUIRED_README_PHRASES = [
 
 REQUIRED_GTM_PHRASES = [
     "Market signals",
+    "Three-year growth goal",
+    "$10 million business in 3 years",
     "Project value analysis",
     "Launch channels",
     "Success metrics",
@@ -46,6 +48,7 @@ REQUIRED_APP_PHRASES = [
     "Title-led trigger",
     "The four Leaf2Tree stages",
     "Leaf2Tree offers",
+    "$10M",
 ]
 
 

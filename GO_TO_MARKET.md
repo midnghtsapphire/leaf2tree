@@ -27,6 +27,17 @@ Leaf2Tree should be positioned as a focused S2M (ship to market) studio for foun
 
 > We take rough ideas, scattered notes, and half-built offers and turn them into a launch-ready surface that is easier to understand, easier to trust, and easier to ship.
 
+## Three-year growth goal
+
+Leaf2Tree is being shaped around a clear internal target: build toward a **$10 million business in 3 years** by making S2M delivery faster, more repeatable, and easier to scale across repositories.
+
+### What that goal changes strategically
+
+- The offer has to be productized enough to repeat, not just customized enough to finish once.
+- The website has to sell the system clearly, because the site is part of the operating model, not just a portfolio artifact.
+- The research and launch documentation have to reduce future delivery time so each S2M repo compounds instead of starting from zero.
+- The positioning has to appeal to buyers who will pay for speed, clarity, and launch readiness rather than open-ended consulting ambiguity.
+
 ## Project value analysis
 
 ### Why this project matters
