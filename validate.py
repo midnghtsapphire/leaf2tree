@@ -23,7 +23,7 @@ REQUIRED_FILES = [
 ]
 
 REQUIRED_README_PHRASES = [
-    "S2M",
+    "Repository-level S2M protocol",
     "validate.py",
 ]
 
@@ -42,7 +42,8 @@ REQUIRED_AGENTS_PHRASES = [
 
 REQUIRED_APP_PHRASES = [
     "S2M = ship to market",
-    "Putting S2M in the title should already imply the whole shebang.",
+    "S2M default behavior",
+    "Title-led trigger",
     "The four Leaf2Tree stages",
     "Leaf2Tree offers",
 ]
