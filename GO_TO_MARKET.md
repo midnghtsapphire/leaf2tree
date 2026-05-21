@@ -33,6 +33,12 @@ Leaf2Tree should be positioned as a focused S2M (ship to market) studio for foun
 
 Leaf2Tree is valuable because it compresses the gap between an early idea and a credible market-facing release. Instead of stopping at planning, it packages positioning, launch assets, and delivery guidance in one motion.
 
+Concrete examples in the current repo:
+
+- The website, docs, and validation surface can now be bootstrapped and verified in a single pass instead of waiting on separate research, content, and delivery rounds.
+- The site frames a 72-hour launch-brief motion on the homepage, giving the offer a faster and more legible entry point for early buyers.
+- The repo now includes a validation step (`python3 validate.py`) so missing ship artifacts are caught before release instead of after handoff.
+
 ### Priority level
 
 High. The repo is both the product surface and the demonstration of the service itself, so every improvement compounds sales readiness, portfolio clarity, and future delivery speed.

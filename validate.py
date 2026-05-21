@@ -61,7 +61,12 @@ def require_phrases(relative_path: str, phrases: list[str], errors: list[str]) -
         errors.append(f"Cannot inspect missing file: {relative_path}")
         return
 
-    content = path.read_text(encoding="utf-8")
+    try:
+        content = path.read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError) as exc:
+        errors.append(f"Unable to read {relative_path}: {exc}")
+        return
+
     for phrase in phrases:
         if phrase not in content:
             errors.append(f"Missing phrase in {relative_path}: {phrase}")
