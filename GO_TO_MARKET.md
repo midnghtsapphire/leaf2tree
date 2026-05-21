@@ -48,7 +48,7 @@ High. The repo is both the product surface and the demonstration of the service 
 - Creates a reusable S2M template for future repositories
 - Demonstrates a one-iteration delivery model instead of staged partial launches
 - Improves the odds that rough internal concepts become public, testable offers quickly
-- Supports a larger three-year growth goal by making launch execution more repeatable
+- Supports a stated three-year goal of building toward a $10 million business by making launch execution more repeatable across repositories
 
 ## Offer ladder
 

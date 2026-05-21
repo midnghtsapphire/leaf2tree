@@ -24,7 +24,6 @@ REQUIRED_FILES = [
 
 REQUIRED_README_PHRASES = [
     "S2M",
-    "ship to market",
     "validate.py",
 ]
 
@@ -72,6 +71,23 @@ def require_phrases(relative_path: str, phrases: list[str], errors: list[str]) -
             errors.append(f"Missing phrase in {relative_path}: {phrase}")
 
 
+def require_any_phrase(relative_path: str, phrases: list[str], errors: list[str]) -> None:
+    path = ROOT / relative_path
+    if not path.exists():
+        errors.append(f"Cannot inspect missing file: {relative_path}")
+        return
+
+    try:
+        content = path.read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError) as exc:
+        errors.append(f"Unable to read {relative_path}: {exc}")
+        return
+
+    if not any(phrase in content for phrase in phrases):
+        joined = " / ".join(phrases)
+        errors.append(f"Missing one of required phrases in {relative_path}: {joined}")
+
+
 def main() -> int:
     errors: list[str] = []
 
@@ -79,6 +95,7 @@ def main() -> int:
         require_file(relative_path, errors)
 
     require_phrases("README.md", REQUIRED_README_PHRASES, errors)
+    require_any_phrase("README.md", ["ship to market", "ship-to-market"], errors)
     require_phrases("GO_TO_MARKET.md", REQUIRED_GTM_PHRASES, errors)
     require_phrases("AGENTS.md", REQUIRED_AGENTS_PHRASES, errors)
     require_phrases("src/App.tsx", REQUIRED_APP_PHRASES, errors)

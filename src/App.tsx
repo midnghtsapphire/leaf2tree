@@ -100,7 +100,7 @@ const protocolRules: ProtocolRule[] = [
   {
     title: 'Title-led trigger',
     description:
-      'If the title says S2M, Leaf2Tree treats that as enough signal to run the full ship-to-market motion for the target repo.',
+      'If the title says S2M, Leaf2Tree treats that as enough signal to run the full ship-to-market motion for the target repository.',
   },
   {
     title: 'Deep research included',
