@@ -22,6 +22,11 @@ type Offer = {
   deliverables: string[]
 }
 
+type ProtocolRule = {
+  title: string
+  description: string
+}
+
 const stats: Stat[] = [
   { value: '72h', label: 'to turn scattered inputs into a launch brief' },
   { value: '1', label: 'focused message system across site, pitch, and CTA' },
@@ -88,6 +93,24 @@ const offers: Offer[] = [
     name: 'Ship to Market',
     fit: 'For zero-to-one launches that need website, docs, and go-to-market materials together.',
     deliverables: ['Launch-ready site', 'Brand + security + deployment docs', 'Market research and rollout guidance'],
+  },
+]
+
+const protocolRules: ProtocolRule[] = [
+  {
+    title: 'Title-led trigger',
+    description:
+      'If the title says S2M, Leaf2Tree treats that as enough signal to run the full ship-to-market motion for the target repo.',
+  },
+  {
+    title: 'Deep research included',
+    description:
+      'Every S2M run should capture market signals, project value, launch channels, and success criteria instead of stopping at surface copy.',
+  },
+  {
+    title: 'One iteration',
+    description:
+      'The expected delivery is the canonical front-to-back website and ship docs in one pass, not a chain of placeholder follow-ups.',
   },
 ]
 
@@ -158,6 +181,21 @@ function App() {
               <article className="content-card" key={pillar.title}>
                 <h3>{pillar.title}</h3>
                 <p>{pillar.description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="section-heading">
+            <p className="eyebrow">S2M default behavior</p>
+            <h2>Putting S2M in the title should already imply the whole shebang.</h2>
+          </div>
+          <div className="protocol-grid">
+            {protocolRules.map((rule) => (
+              <article className="content-card" key={rule.title}>
+                <h3>{rule.title}</h3>
+                <p>{rule.description}</p>
               </article>
             ))}
           </div>

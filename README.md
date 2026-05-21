@@ -12,6 +12,8 @@ This repository previously contained only `/home/runner/work/leaf2tree/leaf2tree
 - Responsive layout focused on S2M offers and process
 - Production build via Vite
 - Supporting launch documentation following revvel-style ship-to-market standards
+- Repository-level S2M protocol so future agents treat `S2M` as a full single-iteration ship request
+- Built-in `validate.py` completeness check for required S2M files and content markers
 
 ## Quick start
 
@@ -34,6 +36,14 @@ npm run preview
 ```bash
 npm run lint
 ```
+
+## Completeness validation
+
+```bash
+python3 validate.py
+```
+
+This verifies that the repo still contains the required S2M surface area: the website, the revvel-style docs, and the in-repo protocol that tells future agents how to interpret `S2M`.
 
 ## Project structure
 
@@ -62,3 +72,4 @@ npm run lint
 - `npm run build` — type-check and produce production assets in `dist/`
 - `npm run preview` — preview the production bundle
 - `npm run lint` — lint the codebase
+- `python3 validate.py` / `npm run validate` — verify S2M completeness requirements
