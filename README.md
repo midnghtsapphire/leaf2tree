@@ -1,5 +1,9 @@
 # Leaf2Tree
 
+
+<!-- AUTO-PACKAGE-BADGES:START -->
+
+<!-- AUTO-PACKAGE-BADGES:END -->
 Leaf2Tree is a launch-focused S2M (ship to market) website for turning rough product ideas into a clear, market-facing surface.
 
 ## What changed
